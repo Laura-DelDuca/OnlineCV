@@ -1,14 +1,484 @@
 body {
+  background-color: white;
+  overflow: hidden;
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: 0.1rem;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* ______________________________Scrollbar */
+
+/* ::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+} */
+
+/* ______________________________Navbar */
+
+#NavBar {
+  background-color: #20002e;
+  list-style-type: none;
+  margin: 0 auto;
+  float: left;
+  padding: 0;
+  width: 100vw;
+}
+
+.ListNavBar {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.ListNavBar:hover {
+  background-color: #ff942a;
+}
+
+/* ______________________________PageWelcome */
+
+.PageWelcome {
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  grid-template-rows: 10% 30% 2% 58%;
+  height: 95vh;
+  row-gap: 0, 5%;
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+#NavBar_PageWelcome {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.WelcomeTop {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 0;
+  background-color: #350051;
+  text-align: center;
+  color: white;
+}
+
+#MyPhotoDiv {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  margin-top: -60px;
+}
+
+#photo {
+  width: 15%;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
+.WelcomeBottom {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  margin: 0;
+  background-color: white;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-bottom: 50%;
+  border: 2px solid rgb(230, 226, 226);
+  text-align: center;
+  height: 100%;
+}
+
+#TextWelcome {
+  margin-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: grey;
+}
+
+/* ______________________________PageAbout */
+
+.PageAbout {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 10% auto;
+  height: 100vh;
+  background-color: black;
+}
+
+#NavBar_PageAbout {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.TextPresentation {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin-top: 3%;
+}
+
+#aboutMeIntro {
+  color: white;
+}
+
+#aboutMeText {
+  text-align: justify;
+  color: white;
+  line-height: 2;
+}
+
+/* ______________________________PageCV */
+
+.PageCV {
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  grid-template-rows: 10% 60% 30%;
+  height: 100vh;
+}
+
+#NavBar_PageCV {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.CVLeft {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: #20002e;
+  color: rgb(236, 230, 230);
+  padding: 10px;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  margin-left: 2%;
+}
+
+#surnameName {
+  text-align: center;
+  font-size: 40px;
+}
+
+#surname {
+  font-weight: thin;
+}
+
+#name {
+  border-bottom: 3px solid white;
+  border-radius: 1px 1px 1px 1px;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+
+#title {
+  text-align: center;
+}
+
+#coords {
+  padding-left: 10%;
+}
+
+#contact {
+  padding-top: 8%;
+  padding-left: 10%;
+
+}
+
+.CVCenter {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-left: 1px dotted black;
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.CVRight {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-left: 1px dotted black;
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.role {
+  background-color: #222222;
+  color: white;
+  padding: 10px;
+  width: 70%;
+  font-size: 18px;
+}
+
+.info {
+  font-size : 15px;
+  line-height: 2;
+}
+
+.CVBottom {
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: #3b0153;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  color: white;
+}
+
+#BottomLeft {
+width: 60%;
+color: white;
+}
+
+#BottomRight {
+width: 40%;
+}
+
+#logos {
+  width: 70%;
+   padding-left: 5%;
+   padding-top: 5%;
+   display:flex;
+   align-items: flex-start;
+}
+
+.logo {
+  width: 12%;
+  padding-right: 5%;
+}
+
+#logoJS {
+  width: 13%;
+}
+
+#logoREACT {
+  width: 15%;
+}
+
+#logoGITHUB {
+  width: 15%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.experience {
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 30%;
+}
+
+.languages {
+  line-height: 1,5;
+}
+
+/* ______________________________PageInterests */
+
+.PageInterests {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 10% 90%;
+  height: 100vh;
+  background-color: black;
+}
+
+#NavBar_PageInterests {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.Tiles {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.TilesTitle {
+  font-family: sans-serif;
+}
+
+.Anticipation {
+  width: 180px;
+  height: 160px;
+  margin: 5px;
+  background-image: url("photo_future.jpg");
+  background-size: cover;
+  border-radius: 5px;
+  font-weight: thin;
+  text-align: center;
+}
+
+.TxAnticipation {
+  position: relative;
+  visibility: hidden;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.Anticipation:hover .TxAnticipation {
+  visibility: visible;
+  background-color: black;
+  width: 100%;
+}
+
+.Music {
+  width: 400px;
+  height: 160px;
+  margin: 5px;
+  background-image: url("photo_music.jpg");
+  border-radius: 5px;
+  background-size: cover;
+  text-align: center;
+}
+
+.TxMusic {
+  position: relative;
+  visibility: hidden;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.Music:hover .TxMusic {
+  visibility: visible;
+  background-color: black;
+  width: 100%;
+}
+
+.Litterature {
+  width: 400px;
+  height: 160px;
+  margin: 5px;
+  background-image: url("photo_books.jpg");
+  background-size: cover;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.TxLitterature {
+  position: relative;
+  visibility: hidden;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.Litterature:hover .TxLitterature {
+  visibility: visible;
+  background-color: black;
+  width: 100%;
+}
+
+.Videogames {
+  width: 180px;
+  height: 160px;
+  margin: 5px;
+  background-image: url("photo_PS.jpg");
+  background-size: cover;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.TxVideogames {
+  position: relative;
+  visibility: hidden;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.Videogames:hover .TxVideogames {
+  visibility: visible;
+  background-color: black;
+  width: 100%;
+}
+
+.JiuJitsu {
+  width: 180px;
+  height: 160px;
+  margin: 5px;
+  background-image: url("photo_kimono.jpg");
+  background-size: cover;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.TxJiuJitsu {
+  position: relative;
+  visibility: hidden;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.JiuJitsu:hover .TxJiuJitsu {
+  visibility: visible;
+  background-color: black;
+  width: 100%;
+}
+
+.Animals {
+  width: 400px;
+  height: 160px;
+  margin: 5px;
+  background-image: url("photo_elephants.jpg");
+  background-size: cover;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.TxAnimals {
+  position: relative;
+  visibility: hidden;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.Animals:hover .TxAnimals {
+  visibility: visible;
+  background-color: black;
+  width: 100%;
 }
